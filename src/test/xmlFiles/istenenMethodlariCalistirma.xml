@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="istenen Test methodlarini calistirma">
+    <!--
+    eger birden fazla hiyerarsiye ihtiyaciniz varsa uygun adimdan
+    2. bir hiyerarsi olusturabilirsiniz
+    -->
+    <test name="istenen methodlar">
+        <classes>
+            <class name="tests.day13_testNGFramework.C07_QDNegativeLoginTesti">
+                <methods>
+                    <include name="validUsernameWithInvalidPass"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="package ekleme">
+        <packages>
+            <package name="tests.day14_testNGFramework_xmlFiles"/>
+        </packages>
+    </test>
+</suite>

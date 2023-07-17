@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="istenen Classlari toplu calistirma">
+    <test name="class calistirma">
+        <classes>
+            <class name="tests.TestCase1RegisterUser"/>
+        </classes>
+    </test>
+</suite>
