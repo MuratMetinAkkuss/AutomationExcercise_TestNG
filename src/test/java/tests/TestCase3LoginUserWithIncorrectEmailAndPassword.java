@@ -8,11 +8,12 @@ import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class TestCase2LoginUserWithCorrectEmailAndPassword {
+import java.io.ObjectInputFilter;
+
+public class TestCase3LoginUserWithIncorrectEmailAndPassword {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();
-        //Test Case 2: Login User with correct email and password
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
         Driver.getDriver().get("http://automationexercise.com");
@@ -22,20 +23,13 @@ public class TestCase2LoginUserWithCorrectEmailAndPassword {
         aEP.signUpLogInButton.click();
         //5. Verify 'Login to your account' is visible
         Assert.assertTrue(aEP.loginToYourAccountTextElement.isDisplayed());
-        MakeRegistration makeRegistration = new MakeRegistration();
-        makeRegistration.makeRegistration();
-        //6. Enter correct email address and password
-        aEP.loginToYourAccountWiaEmail.sendKeys(makeRegistration.eMail);
-        aEP.loginToYourAccountWiaPassword.sendKeys(makeRegistration.passWord);
+        //6. Enter incorrect email address and password
+        aEP.loginToYourAccountWiaEmail.sendKeys(ConfigReader.getProperty("incorrectMail"));
+        aEP.loginToYourAccountWiaPassword.sendKeys(ConfigReader.getProperty("incorrectPassword"));
         //7. Click 'login' button
         aEP.loginToYourAccountWiaLoginButton.click();
-        //8. Verify that 'Logged in as username' is visible
-        Assert.assertTrue(aEP.loggedInAsUsername.isDisplayed());
-        //9. Click 'Delete Account' button
-        aEP.deleteAccount.click();
-        //10. Verify that 'ACCOUNT DELETED!' is visible
-        Assert.assertTrue(aEP.accountDeletedAfterClickDeleteAccount.isDisplayed());
+        //8. Verify error 'Your email or password is incorrect!' is visible
+        Assert.assertTrue(aEP.incorrectLogInSignText.isDisplayed());
         Driver.closeDriver();
-
     }
 }

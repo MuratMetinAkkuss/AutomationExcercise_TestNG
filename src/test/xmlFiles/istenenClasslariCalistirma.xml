@@ -3,7 +3,7 @@
 <suite name="istenen Classlari toplu calistirma">
     <test name="class calistirma">
         <classes>
-            <class name="tests.TestCase1RegisterUser"/>
+            <class name="tests.TestCase3LoginUserWithIncorrectEmailAndPassword"/>
         </classes>
     </test>
 </suite>

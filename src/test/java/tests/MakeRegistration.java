@@ -2,42 +2,25 @@ package tests;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
-import utilities.Driver;
 import utilities.ReusableMethods;
 
-
-public class TestCase1RegisterUser {
-    @Test
-    public void test01(){
+public class MakeRegistration {
+    public Faker faker = new Faker();
+    public String passWord = faker.internet().password();
+    public String eMail = faker.internet().emailAddress();
+    public void makeRegistration(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();
-        //1. Launch browser
-        //2. Navigate to url 'http://automationexercise.com'
-        Driver.getDriver().get(ConfigReader.getProperty("automationExcerciseUrl"));
-
-        //3. Verify that home page is visible successfully
-        Assert.assertTrue(aEP.isHomePageVisible.isDisplayed());
-
-        //4. Click on 'Signup / Login' button
-
-        aEP.signUpLogInButton.click();
-
-        //5. Verify 'New User Signup!' is visible
-
-        Assert.assertTrue(aEP.isNewUserSignupSign.isDisplayed());
-
         //6. Enter name and email address
 
-        Faker faker = new Faker();
+
         String name = faker.name().firstName();
         aEP.signupName.sendKeys(name);
 
-        aEP.signupEmail.sendKeys(faker.internet().emailAddress());
+        aEP.signupEmail.sendKeys(eMail);
 
         //7. Click 'Signup' button
 
@@ -50,7 +33,8 @@ public class TestCase1RegisterUser {
         //9. Fill details: Title, Name, Email, Password, Date of birth
         aEP.popUpAdsInEveryPage.click();
 
-        aEP.passWord.sendKeys(faker.internet().password()+Keys.PAGE_DOWN);
+
+        aEP.passWord.sendKeys(passWord + Keys.PAGE_DOWN);
 
 
         Select selectDay = new Select(aEP.daysOfBirth);
@@ -113,13 +97,6 @@ public class TestCase1RegisterUser {
 
         //15. Click 'Continue' button
         aEP.accountContinueButtonAfterSignPage.click();
-        //16. Verify that 'Logged in as username' is visible
-        Assert.assertTrue(aEP.loggedInAsUsername.isDisplayed());
-        //17. Click 'Delete Account' button
-        aEP.deleteAccount.click();
-        //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
-        Assert.assertTrue(aEP.accountDeletedAfterClickDeleteAccount.isDisplayed());
-        aEP.continueButtonAfterClickDeleteAccount.click();
-        Driver.closeDriver();
+        aEP.logOutButton.click();
     }
 }

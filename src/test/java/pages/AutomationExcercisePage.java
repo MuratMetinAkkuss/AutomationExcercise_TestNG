@@ -80,6 +80,10 @@ public class AutomationExcercisePage {
     public WebElement loginToYourAccountWiaPassword;
     @FindBy(xpath = "//*[@data-qa='login-button']")
     public WebElement loginToYourAccountWiaLoginButton;
+    @FindBy(xpath = "//a[@href='/logout']")
+    public WebElement logOutButton;
+    @FindBy(xpath = "//p[text()='Your email or password is incorrect!']")
+    public WebElement incorrectLogInSignText;
 
 
 
