@@ -72,6 +72,15 @@ public class AutomationExcercisePage {
     public WebElement accountDeletedAfterClickDeleteAccount;
     @FindBy(xpath = "//a[@data-qa='continue-button']")
     public WebElement continueButtonAfterClickDeleteAccount;
+    @FindBy(xpath = "//*[text()='Login to your account']")
+    public WebElement loginToYourAccountTextElement;
+    @FindBy(xpath = "//*[@data-qa='login-email']")
+    public WebElement loginToYourAccountWiaEmail;
+    @FindBy(xpath = "//*[@data-qa='login-password']")
+    public WebElement loginToYourAccountWiaPassword;
+    @FindBy(xpath = "//*[@data-qa='login-button']")
+    public WebElement loginToYourAccountWiaLoginButton;
+
 
 
 
