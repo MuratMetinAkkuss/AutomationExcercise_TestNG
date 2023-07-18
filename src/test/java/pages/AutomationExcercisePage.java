@@ -84,6 +84,8 @@ public class AutomationExcercisePage {
     public WebElement logOutButton;
     @FindBy(xpath = "//p[text()='Your email or password is incorrect!']")
     public WebElement incorrectLogInSignText;
+    @FindBy(xpath = "//p[text()='Email Address already exist!']")
+    public WebElement accountAlreadyExsist;
 
 
 
