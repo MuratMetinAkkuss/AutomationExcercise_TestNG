@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class TestCase4LogoutUser {
     @Test
@@ -23,10 +24,9 @@ public class TestCase4LogoutUser {
         Assert.assertTrue(aEP.loginToYourAccountTextElement.isDisplayed());
         //6. Enter correct email address and password
         // i'am going to use Make Registration class
-        MakeRegistration makeRegistration = new MakeRegistration();
-        makeRegistration.makeRegistration();
-        aEP.loginToYourAccountWiaEmail.sendKeys(makeRegistration.eMail);
-        aEP.loginToYourAccountWiaPassword.sendKeys(makeRegistration.passWord);
+        ReusableMethods.makeRegistration();
+        aEP.loginToYourAccountWiaEmail.sendKeys(ReusableMethods.eMail);
+        aEP.loginToYourAccountWiaPassword.sendKeys(ReusableMethods.passWord);
         //7. Click 'login' button
         aEP.loginToYourAccountWiaLoginButton.click();
         //8. Verify that 'Logged in as username' is visible

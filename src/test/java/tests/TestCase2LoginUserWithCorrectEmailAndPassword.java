@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class TestCase2LoginUserWithCorrectEmailAndPassword {
     @Test
@@ -22,11 +23,10 @@ public class TestCase2LoginUserWithCorrectEmailAndPassword {
         aEP.signUpLogInButton.click();
         //5. Verify 'Login to your account' is visible
         Assert.assertTrue(aEP.loginToYourAccountTextElement.isDisplayed());
-        MakeRegistration makeRegistration = new MakeRegistration();
-        makeRegistration.makeRegistration();
+        ReusableMethods.makeRegistration();
         //6. Enter correct email address and password
-        aEP.loginToYourAccountWiaEmail.sendKeys(makeRegistration.eMail);
-        aEP.loginToYourAccountWiaPassword.sendKeys(makeRegistration.passWord);
+        aEP.loginToYourAccountWiaEmail.sendKeys(ReusableMethods.eMail);
+        aEP.loginToYourAccountWiaPassword.sendKeys(ReusableMethods.passWord);
         //7. Click 'login' button
         aEP.loginToYourAccountWiaLoginButton.click();
         //8. Verify that 'Logged in as username' is visible

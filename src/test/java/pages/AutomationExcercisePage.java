@@ -106,6 +106,10 @@ public class AutomationExcercisePage {
     public WebElement contactUsFormSuccesMessage;
     @FindBy(xpath = "//a[@class='btn btn-success']")
     public WebElement onNavbarHomeButton;
+    @FindBy(xpath = "//a[text()=' Test Cases']")
+    public WebElement onNavbarClickTestCase;
+    @FindBy(xpath = "//h2[@class='title text-center']")
+    public WebElement testCasePageText;
 
 
 
