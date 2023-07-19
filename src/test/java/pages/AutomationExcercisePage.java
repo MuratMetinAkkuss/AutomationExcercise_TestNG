@@ -86,6 +86,26 @@ public class AutomationExcercisePage {
     public WebElement incorrectLogInSignText;
     @FindBy(xpath = "//p[text()='Email Address already exist!']")
     public WebElement accountAlreadyExsist;
+    @FindBy(xpath = "//a[@href='/contact_us']")
+    public  WebElement contactUs;
+    @FindBy(xpath = "//h2[text()='Get In Touch']")
+    public WebElement getInTouchText;
+    @FindBy(xpath = "//input[@data-qa='name']")
+    public WebElement contactUsFormName;
+    @FindBy(xpath = "//input[@data-qa='email']")
+    public WebElement contactUsFormEmail;
+    @FindBy(xpath = "//input[@data-qa='subject']")
+    public WebElement contactUsFormSubject;
+    @FindBy(xpath = "//textarea[@data-qa='message']")
+    public WebElement contactUsFormMessage;
+    @FindBy(xpath = "//input[@name='upload_file']")
+    public WebElement contactUsFormUploadImg;
+    @FindBy(xpath = "//input[@type='submit']")
+    public WebElement contactUsFormSubmit;
+    @FindBy(xpath = "//div[@class='status alert alert-success']")
+    public WebElement contactUsFormSuccesMessage;
+    @FindBy(xpath = "//a[@class='btn btn-success']")
+    public WebElement onNavbarHomeButton;
 
 
 
