@@ -16,6 +16,7 @@ import utilities.TestBaseReport;
 public class TestCase1RegisterUser extends TestBaseReport {
     @Test
     public void test01(){
+        extentTest=extentReports.createTest("Test01","Smoke test");
         AutomationExcercisePage aEP = new AutomationExcercisePage();
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
@@ -23,7 +24,7 @@ public class TestCase1RegisterUser extends TestBaseReport {
 
         //3. Verify that home page is visible successfully
         Assert.assertTrue(aEP.isHomePageVisible.isDisplayed());
-
+        extentTest.pass("home page is visible");
         //4. Click on 'Signup / Login' button
 
         aEP.signUpLogInButton.click();
@@ -31,6 +32,7 @@ public class TestCase1RegisterUser extends TestBaseReport {
         //5. Verify 'New User Signup!' is visible
 
         Assert.assertTrue(aEP.isNewUserSignupSign.isDisplayed());
+        extentTest.pass("New User Signup! is visible");
 
         //6. Enter name and email address
 
@@ -47,6 +49,7 @@ public class TestCase1RegisterUser extends TestBaseReport {
         //8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
 
         Assert.assertTrue(aEP.enterAccountInformation.isDisplayed());
+        extentTest.pass("ENTER ACCOUNT INFORMATION is visible");
 
         //9. Fill details: Title, Name, Email, Password, Date of birth
         aEP.popUpAdsInEveryPage.click();
@@ -111,15 +114,18 @@ public class TestCase1RegisterUser extends TestBaseReport {
 
         //14. Verify that 'ACCOUNT CREATED!' is visible
         Assert.assertTrue(aEP.accountCreatedAfterSignPage.isDisplayed());
+        extentTest.pass("ACCOUNT CREATED! is visible");
 
         //15. Click 'Continue' button
         aEP.accountContinueButtonAfterSignPage.click();
         //16. Verify that 'Logged in as username' is visible
         Assert.assertTrue(aEP.loggedInAsUsername.isDisplayed());
+        extentTest.pass("Logged in as username is visible");
         //17. Click 'Delete Account' button
         aEP.deleteAccount.click();
         //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
         Assert.assertTrue(aEP.accountDeletedAfterClickDeleteAccount.isDisplayed());
+        extentTest.pass("ACCOUNT DELETED! is visible");
         aEP.continueButtonAfterClickDeleteAccount.click();
         Driver.closeDriver();
     }
