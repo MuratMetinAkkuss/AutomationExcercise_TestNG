@@ -23,5 +23,6 @@ public class TestCase7VerifyTestCasesPage {
 
         //5. Verify user is navigated to test cases page successfully
         Assert.assertTrue(aEP.testCasePageText.isDisplayed());
+        Driver.closeDriver();
     }
 }

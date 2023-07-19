@@ -110,6 +110,24 @@ public class AutomationExcercisePage {
     public WebElement onNavbarClickTestCase;
     @FindBy(xpath = "//h2[@class='title text-center']")
     public WebElement testCasePageText;
+    @FindBy(xpath = "//a[@href='/products']")
+    public WebElement onNavbarProductsButton;
+    @FindBy(xpath = "//h2[text()='All Products']")
+    public WebElement allProductsInProductPage;
+    @FindBy(xpath = "//a[@href='/product_details/1']")
+    public WebElement firstProductInProductPage;
+    @FindBy(xpath = "//h2[text()='Blue Top']")
+    public WebElement firstProductNameInFirstProductPage;
+    @FindBy(xpath = "//p[text()='Category: Women > Tops']")
+    public WebElement firstProductCategoryInFirstProductPage;
+    @FindBy(xpath = "//span[text()='Rs. 500']")
+    public WebElement firstProductPriceInFirstProductPage;
+    @FindBy(xpath = "//p[text()=' In Stock']")
+    public WebElement firstProductAvailabilityInFirstProductPage;
+    @FindBy(xpath = "//p[text()=' New']")
+    public WebElement firstProductConditionInFirstProductPage;
+    @FindBy(xpath = "//p[text()=' Polo']")
+    public WebElement firstProductBrandInFirstProductPage;
 
 
 
