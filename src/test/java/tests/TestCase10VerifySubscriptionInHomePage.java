@@ -9,8 +9,9 @@ import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseReport;
 
-public class TestCase10VerifySubscriptionInHomePage {
+public class TestCase10VerifySubscriptionInHomePage extends TestBaseReport {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();

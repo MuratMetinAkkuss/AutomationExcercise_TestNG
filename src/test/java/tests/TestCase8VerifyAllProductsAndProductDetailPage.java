@@ -9,8 +9,9 @@ import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseReport;
 
-public class TestCase8VerifyAllProductsAndProductDetailPage {
+public class TestCase8VerifyAllProductsAndProductDetailPage extends TestBaseReport {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();

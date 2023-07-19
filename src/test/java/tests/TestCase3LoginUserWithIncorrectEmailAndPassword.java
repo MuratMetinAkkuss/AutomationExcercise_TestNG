@@ -7,10 +7,11 @@ import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseReport;
 
 import java.io.ObjectInputFilter;
 
-public class TestCase3LoginUserWithIncorrectEmailAndPassword {
+public class TestCase3LoginUserWithIncorrectEmailAndPassword extends TestBaseReport {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();

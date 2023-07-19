@@ -7,8 +7,9 @@ import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseReport;
 
-public class TestCase5RegisterUserWithExistingEmail {
+public class TestCase5RegisterUserWithExistingEmail extends TestBaseReport {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();

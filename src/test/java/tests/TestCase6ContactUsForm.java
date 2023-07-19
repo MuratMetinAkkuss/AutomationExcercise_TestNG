@@ -11,10 +11,11 @@ import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseReport;
 
 import java.util.List;
 
-public class TestCase6ContactUsForm {
+public class TestCase6ContactUsForm extends TestBaseReport {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();

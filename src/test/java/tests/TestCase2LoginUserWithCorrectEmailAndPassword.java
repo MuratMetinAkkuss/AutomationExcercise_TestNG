@@ -8,8 +8,9 @@ import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseReport;
 
-public class TestCase2LoginUserWithCorrectEmailAndPassword {
+public class TestCase2LoginUserWithCorrectEmailAndPassword extends TestBaseReport {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();

@@ -7,8 +7,9 @@ import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseReport;
 
-public class TestCase4LogoutUser {
+public class TestCase4LogoutUser extends TestBaseReport {
     @Test
     public void test03(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();

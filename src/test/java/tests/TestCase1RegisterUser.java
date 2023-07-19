@@ -10,9 +10,10 @@ import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseReport;
 
 
-public class TestCase1RegisterUser {
+public class TestCase1RegisterUser extends TestBaseReport {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();
