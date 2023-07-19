@@ -136,6 +136,17 @@ public class AutomationExcercisePage {
     public WebElement searchedProducts;
     @FindBy(xpath = "//img[@src='/get_product_picture/5']")
     public WebElement allProductsRelatedToSearch;
+    @FindBy(xpath = "//footer[@id='footer']")
+    public WebElement footerElementInHomePage;
+    @FindBy(xpath = "//h2[text()='Subscription']")
+    public WebElement subscriptionTextIntFooter;
+    @FindBy(id = "susbscribe_email")
+    public WebElement subscriptionBoxInFooter;
+    @FindBy(id = "subscribe")
+    public WebElement submitSubscriptionInFooter;
+    @FindBy(id = "success-subscribe")
+    public WebElement successfullySubscribedInFooter;
+
 
 
 
