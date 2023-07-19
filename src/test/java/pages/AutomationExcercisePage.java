@@ -128,7 +128,14 @@ public class AutomationExcercisePage {
     public WebElement firstProductConditionInFirstProductPage;
     @FindBy(xpath = "//p[text()=' Polo']")
     public WebElement firstProductBrandInFirstProductPage;
-
+    @FindBy(xpath = "//input[@name='search']")
+    public WebElement searchBoxInProductPage;
+    @FindBy(id = "submit_search")
+    public WebElement submitSearchInProductPage;
+    @FindBy(xpath = "//h2[text()='Searched Products']")
+    public WebElement searchedProducts;
+    @FindBy(xpath = "//img[@src='/get_product_picture/5']")
+    public WebElement allProductsRelatedToSearch;
 
 
 
