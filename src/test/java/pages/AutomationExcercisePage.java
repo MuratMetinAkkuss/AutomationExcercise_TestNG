@@ -148,6 +148,23 @@ public class AutomationExcercisePage {
     public WebElement successfullySubscribedInFooter;
     @FindBy(xpath = "//*[@href='/view_cart']")
     public WebElement onNavbarCartButton;
+    @FindBy(xpath = "(//*[@class='btn btn-default add-to-cart'])[1]")
+    public WebElement clickAddToCartForFirstProduct;
+    @FindBy(xpath = "//*[@class='btn btn-success close-modal btn-block']")
+    public WebElement continueShopping;
+    @FindBy(xpath = "(//*[@class='btn btn-default add-to-cart'])[3]")
+    public WebElement clickAddToCartForSecondProduct;
+    @FindBy(xpath = "(//*[@href='/view_cart'])[2]")
+    public WebElement viewCartButtonAfterClickAddToCart;
+    @FindBy(xpath = "(//*[@class='disabled'])[1]")
+    public WebElement firstProductQuantityInCart;
+    @FindBy(xpath = "(//*[@class='disabled'])[2]")
+    public WebElement secondProductQuantityInCart;
+    @FindBy(xpath = "(//*[@class='cart_price'])[1]")
+    public WebElement firstProductPriceInCart;
+    @FindBy(xpath = "(//*[@class='cart_price'])[2]")
+    public WebElement secondProductPriceInCart;
+
 
 
 
