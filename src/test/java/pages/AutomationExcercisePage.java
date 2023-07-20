@@ -164,8 +164,14 @@ public class AutomationExcercisePage {
     public WebElement firstProductPriceInCart;
     @FindBy(xpath = "(//*[@class='cart_price'])[2]")
     public WebElement secondProductPriceInCart;
-
-
+    @FindBy(xpath = "(//*[text()='View Product'])[1]")
+    public WebElement firstProductViewProductButtonInHomePage;
+    @FindBy(xpath = "//div[@class='product-information']")
+    public WebElement firstProductInformationInProductPage;
+    @FindBy(xpath = "//input[@name='quantity']")
+    public WebElement increaseButtonInFirstProductPage;
+    @FindBy(xpath = "//button[@class='btn btn-default cart']")
+    public WebElement addToCartButtonInFirstProductPage;
 
 
 

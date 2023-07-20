@@ -72,6 +72,7 @@ public class TestCase12AddProductsinCart {
         Assert.assertEquals(firstProductTotal,firstProductExpectedTotal);
         Assert.assertEquals(secondProductTotal,secondProductExpectedTotal);
 
+        Driver.closeDriver();
 
 
 
