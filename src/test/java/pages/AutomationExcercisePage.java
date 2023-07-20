@@ -146,7 +146,8 @@ public class AutomationExcercisePage {
     public WebElement submitSubscriptionInFooter;
     @FindBy(id = "success-subscribe")
     public WebElement successfullySubscribedInFooter;
-
+    @FindBy(xpath = "//*[@href='/view_cart']")
+    public WebElement onNavbarCartButton;
 
 
 

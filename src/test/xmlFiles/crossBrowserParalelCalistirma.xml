@@ -11,15 +11,15 @@
     <test name="Chrome ile calisacak testler">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="tests.day15_crossBrowserTestler.C01_AmazonSearch"/>
-            <class name="tests.day15_crossBrowserTestler.C02_AlertsTesti"/>
+            <class name="tests.TestCase1RegisterUser"/>
+            <class name="tests.TestCase10VerifySubscriptionInHomePage"/>
         </classes>
     </test>
 
     <test name="edge ile calisacak testler">
         <parameter name="browser" value="edge"></parameter>
         <classes>
-            <class name="tests.day15_crossBrowserTestler.C03_BasicAuthentication"/>
+            <class name="tests.TestCase3LoginUserWithIncorrectEmailAndPassword"/>
         </classes>
     </test>
 
