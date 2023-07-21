@@ -26,6 +26,7 @@ public class TestCase4LogoutUser extends TestBaseReport {
         //6. Enter correct email address and password
         // i'am going to use Make Registration class
         ReusableMethods.makeRegistration();
+        aEP.logOutButton.click(); // account must be logged out firstly
         aEP.loginToYourAccountWiaEmail.sendKeys(ReusableMethods.eMail);
         aEP.loginToYourAccountWiaPassword.sendKeys(ReusableMethods.passWord);
         //7. Click 'login' button

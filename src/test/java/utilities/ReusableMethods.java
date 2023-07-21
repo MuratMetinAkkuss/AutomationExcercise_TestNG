@@ -20,12 +20,24 @@ public class ReusableMethods {
     public static Faker faker = new Faker();
     public static String passWord = faker.internet().password();
     public static String eMail = faker.internet().emailAddress();
+    public static String name = faker.name().firstName();
+    public static String lastName = faker.name().lastName();
+    public static String companyName =faker.company().name();
+    public static String adress =faker.address().fullAddress();
+    public static String secondAdress =faker.address().secondaryAddress();
+    public static String state =faker.address().state();
+    public static String city =faker.address().city();
+    public static String zipCode =faker.address().zipCode();
+    public static String phoneNumber =faker.phoneNumber().cellPhone();
     public static void makeRegistration(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();
         //6. Enter name and email address
 
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions = new Actions(Driver.getDriver());
+        actions.moveToElement(aEP.signUpButton).perform();
 
-        String name = faker.name().firstName();
         aEP.signupName.sendKeys(name);
 
         aEP.signupEmail.sendKeys(eMail);
@@ -73,15 +85,15 @@ public class ReusableMethods {
 
         aEP.firstNameInSignPage.sendKeys(name);
 
-        aEP.lastNameInSignPage.sendKeys(faker.name().lastName());
+        aEP.lastNameInSignPage.sendKeys(lastName);
 
 
-        aEP.companyInSignPage.sendKeys(faker.company().name());
+        aEP.companyInSignPage.sendKeys(companyName);
 
 
-        aEP.address1InSignPage.sendKeys(faker.address().fullAddress());
+        aEP.address1InSignPage.sendKeys(adress);
 
-        aEP.address2InSignPage.sendKeys(faker.address().secondaryAddress() + Keys.PAGE_DOWN);
+        aEP.address2InSignPage.sendKeys(secondAdress + Keys.PAGE_DOWN);
 
 
         Select selectCountry = new Select(aEP.countryInSignPage);
@@ -89,13 +101,13 @@ public class ReusableMethods {
 
         ReusableMethods.bekle(3);
 
-        aEP.stateInSignPage.sendKeys(faker.address().country());
+        aEP.stateInSignPage.sendKeys(state);
 
-        aEP.cityInSignPage.sendKeys(faker.address().city());
+        aEP.cityInSignPage.sendKeys(city);
 
-        aEP.zipcodeInSignPage.sendKeys(faker.address().zipCode());
+        aEP.zipcodeInSignPage.sendKeys(zipCode);
 
-        aEP.mobileNumberInSignPage.sendKeys(faker.phoneNumber().cellPhone());
+        aEP.mobileNumberInSignPage.sendKeys(phoneNumber);
 
         //13. Click 'Create Account button'
         aEP.createAccountButtonInSignPage.click();
@@ -105,7 +117,6 @@ public class ReusableMethods {
 
         //15. Click 'Continue' button
         aEP.accountContinueButtonAfterSignPage.click();
-        aEP.logOutButton.click();
     }
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication

@@ -172,6 +172,48 @@ public class AutomationExcercisePage {
     public WebElement increaseButtonInFirstProductPage;
     @FindBy(xpath = "//button[@class='btn btn-default cart']")
     public WebElement addToCartButtonInFirstProductPage;
+    @FindBy(xpath = "//*[@class='product_image']")
+    public WebElement productInCartPage;
+
+    @FindBy(xpath = "//*[@class='btn btn-default check_out']")
+    public WebElement clickProceedToCheckOutInCartPage;
+
+    @FindBy(xpath = "(//*[@class='btn btn-default add-to-cart'])[1]")
+    public WebElement firstProductAddToCartInHomePage;
+    @FindBy(xpath = "//*[text()='Register / Login']")
+    public WebElement registerLoginAfterProceed;
+    @FindBy(xpath = "(//*[@class='address_firstname address_lastname'])[1]")
+    public WebElement firstNameLastNameInAdressDetails;
+    @FindBy(xpath = "(//*[@class='address_address1 address_address2'])[1]")
+    public WebElement companyNameInAdressDetails;
+    @FindBy(xpath = "(//*[@class='address_address1 address_address2'])[2]")
+    public WebElement adress1InAdressDetails;
+    @FindBy(xpath = "(//*[@class='address_address1 address_address2'])[3]")
+    public WebElement adress2InAdressDetails;
+    @FindBy(xpath = "(//*[@class='address_city address_state_name address_postcode'])[1]")
+    public WebElement stateCityZipCodeInAdressDetails;
+    @FindBy(xpath = "(//*[@class='address_phone'])[1]")
+    public WebElement phoneInAdressDetails;
+    @FindBy(xpath = "(//*[@class='heading'])[2]")
+    public WebElement heading2InAdressDetails;
+    @FindBy(xpath = "//*[text()='Place Order']")
+    public WebElement placeOrderInOrderPage;
+    @FindBy(xpath = "//*[@name='name_on_card']")
+    public WebElement nameOnCarInOrderPage;
+    @FindBy(xpath = "//*[@name='card_number']")
+    public WebElement cardNumberInOrderPage;
+    @FindBy(xpath = "//*[@name='cvc']")
+    public WebElement cvcInOrderPage;
+    @FindBy(xpath = "//*[@name='expiry_month']")
+    public WebElement expiryMonthInOrderPage;
+    @FindBy(xpath = "//*[@name='expiry_year']")
+    public WebElement expiryYearInOrderPage;
+    @FindBy(xpath = "//*[@data-qa='pay-button']")
+    public WebElement payAndConfirmInOrderPage;
+    @FindBy(xpath = "//*[text()='Congratulations! Your order has been confirmed!']")
+    public WebElement yourOrderHasBeenConfirmedAfterOrderPage;
+
+
 
 
 
