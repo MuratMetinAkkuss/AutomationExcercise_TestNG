@@ -174,11 +174,9 @@ public class AutomationExcercisePage {
     @FindBy(xpath = "//button[@class='btn btn-default cart']")
     public WebElement addToCartButtonInFirstProductPage;
     @FindBy(xpath = "//*[@class='product_image']")
-    public WebElement productInCartPage;
-
+    public WebElement firstProductInCartPage;
     @FindBy(xpath = "//*[@class='btn btn-default check_out']")
     public WebElement clickProceedToCheckOutInCartPage;
-
     @FindBy(xpath = "(//*[@class='btn btn-default add-to-cart'])[1]")
     public WebElement firstProductAddToCartInHomePage;
     @FindBy(xpath = "//*[text()='Register / Login']")
@@ -217,6 +215,8 @@ public class AutomationExcercisePage {
     public WebElement verifyCartPage;
     @FindBy(xpath = "//*[@name='message']")
     public WebElement messageInOrderPage;
+    @FindBy(xpath = "//*[@class='cart_quantity_delete']")
+    public WebElement xButtonInCartPage;
 
 
 

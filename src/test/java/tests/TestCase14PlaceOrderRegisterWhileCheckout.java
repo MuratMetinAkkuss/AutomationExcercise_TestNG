@@ -33,7 +33,7 @@ public class TestCase14PlaceOrderRegisterWhileCheckout {
         actions.sendKeys(Keys.PAGE_UP).perform();
         aEP.onPopUpCartButton.click();
         //6. Verify that cart page is displayed
-        Assert.assertTrue(aEP.productInCartPage.isDisplayed());
+        Assert.assertTrue(aEP.firstProductInCartPage.isDisplayed());
         //7. Click Proceed To Checkout
         aEP.clickProceedToCheckOutInCartPage.click();
         //8. Click 'Register / Login' button
@@ -95,5 +95,6 @@ public class TestCase14PlaceOrderRegisterWhileCheckout {
        ////20. Verify 'ACCOUNT DELETED!' and click 'Continue' button
        Assert.assertTrue(aEP.accountDeletedAfterClickDeleteAccount.isDisplayed());
        aEP.continueButtonAfterClickDeleteAccount.click();
+       Driver.quitDriver();
     }
 }

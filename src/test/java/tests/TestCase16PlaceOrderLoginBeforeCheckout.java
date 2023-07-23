@@ -15,7 +15,6 @@ public class TestCase16PlaceOrderLoginBeforeCheckout {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();
-        //Test Case 4: Logout User
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
         Driver.getDriver().get("http://automationexercise.com");
@@ -36,7 +35,7 @@ public class TestCase16PlaceOrderLoginBeforeCheckout {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
 
         aEP.firstProductAddToCartInHomePage.click();
-        aEP.onPopUpCartButton.click();
+        aEP.continueShopping.click();
 
         //8. Click 'Cart' button
         actions = new Actions(Driver.getDriver());
