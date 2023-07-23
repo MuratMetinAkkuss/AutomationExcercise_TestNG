@@ -233,6 +233,20 @@ public class AutomationExcercisePage {
     public WebElement tshirtsUnderMenOnLeftSideBarInWomenPage;
     @FindBy(xpath = "//*[text()='Men - Tshirts Products']")
     public WebElement productsInMenTshirtsPage;
+    @FindBy(xpath = "//*[@class='brands_products']")
+    public WebElement brandsOnLeftSideBarInProductPage;
+    @FindBy(xpath = "//*[@href='/brand_products/Babyhug']")
+    public WebElement babyhugOnLeftSideBarInProductPage;
+    @FindBy(xpath = "//*[text()='Brand - Babyhug Products']")
+    public WebElement babyhugProductsInBabyhugPage;
+    @FindBy(xpath = "//*[@href='/brand_products/Madame']")
+    public WebElement madameOnLeftSideBarInBabyhugPage;
+    @FindBy(xpath = "//*[text()='Brand - Madame Products']")
+    public WebElement madameProductsInMadamePage;
+
+
+
+
 
 
 
