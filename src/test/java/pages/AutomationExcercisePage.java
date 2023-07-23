@@ -281,7 +281,10 @@ public class AutomationExcercisePage {
     public WebElement formTextBoxInOrderingProcess;
     @FindBy(xpath = "//*[@class='btn btn-default check_out']")
     public WebElement formTextButtonInOrderingProcess;
-
+    @FindBy(xpath = "//*[@id='scrollUp']")
+    public WebElement arrowToMoveUpwarInHomePage;
+    @FindBy(xpath = "//*[@class='col-sm-12']")
+    public WebElement fullFledgedTextInHomePage;
 
 
 
