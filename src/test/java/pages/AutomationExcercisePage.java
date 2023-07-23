@@ -195,6 +195,18 @@ public class AutomationExcercisePage {
     public WebElement phoneInAdressDetails;
     @FindBy(xpath = "(//*[@class='heading'])[2]")
     public WebElement heading2InAdressDetails;
+    @FindBy(xpath = "(//*[@class='address_firstname address_lastname'])[2]")
+    public WebElement firstNameLastNameInBillDetails;
+    @FindBy(xpath = "(//*[@class='address_address1 address_address2'])[4]")
+    public WebElement companyNameInBillDetails;
+    @FindBy(xpath = "(//*[@class='address_address1 address_address2'])[5]")
+    public WebElement adress1InBillDetails;
+    @FindBy(xpath = "(//*[@class='address_address1 address_address2'])[6]")
+    public WebElement adress2InBillDetails;
+    @FindBy(xpath = "(//*[@class='address_city address_state_name address_postcode'])[2]")
+    public WebElement stateCityZipCodeInBillDetails;
+    @FindBy(xpath = "(//*[@class='address_phone'])[2]")
+    public WebElement phoneInBillDetails;
     @FindBy(xpath = "//*[text()='Place Order']")
     public WebElement placeOrderInOrderPage;
     @FindBy(xpath = "//*[@name='name_on_card']")
