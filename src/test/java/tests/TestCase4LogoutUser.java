@@ -24,7 +24,7 @@ public class TestCase4LogoutUser extends TestBaseReport {
         //6. Enter correct email address and password
         // i'am going to use Make Registration class
         ReusableMethods.makeRegistration();
-        aEP.logOutButton.click(); // account must be logged out firstly
+        aEP.onNavbarLogOutButton.click(); // account must be logged out firstly
         aEP.loginToYourAccountWiaEmail.sendKeys(ReusableMethods.eMail);
         aEP.loginToYourAccountWiaPassword.sendKeys(ReusableMethods.passWord);
         //7. Click 'login' button
@@ -32,7 +32,7 @@ public class TestCase4LogoutUser extends TestBaseReport {
         //8. Verify that 'Logged in as username' is visible
         Assert.assertTrue(aEP.loggedInAsUsername.isDisplayed());
         //9. Click 'Logout' button
-        aEP.logOutButton.click();
+        aEP.onNavbarLogOutButton.click();
         //10. Verify that user is navigated to login page
         Assert.assertTrue(aEP.loginToYourAccountTextElement.isDisplayed());
         Driver.closeDriver();

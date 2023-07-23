@@ -80,7 +80,7 @@ public class AutomationExcercisePage {
     @FindBy(xpath = "//*[@data-qa='login-button']")
     public WebElement loginToYourAccountWiaLoginButton;
     @FindBy(xpath = "//a[@href='/logout']")
-    public WebElement logOutButton;
+    public WebElement onNavbarLogOutButton;
     @FindBy(xpath = "//p[text()='Your email or password is incorrect!']")
     public WebElement incorrectLogInSignText;
     @FindBy(xpath = "//p[text()='Email Address already exist!']")
@@ -133,7 +133,7 @@ public class AutomationExcercisePage {
     public WebElement submitSearchInProductPage;
     @FindBy(xpath = "//h2[text()='Searched Products']")
     public WebElement searchedProducts;
-    @FindBy(xpath = "//img[@src='/get_product_picture/5']")
+    @FindBy(xpath = "//*[@class='product-image-wrapper']")
     public WebElement allProductsRelatedToSearch;
     @FindBy(xpath = "//footer[@id='footer']")
     public WebElement footerElementInHomePage;
@@ -243,7 +243,8 @@ public class AutomationExcercisePage {
     public WebElement madameOnLeftSideBarInBabyhugPage;
     @FindBy(xpath = "//*[text()='Brand - Madame Products']")
     public WebElement madameProductsInMadamePage;
-
+    @FindBy(xpath = "(//*[@class='btn btn-default add-to-cart'])[1]")
+    public WebElement addToCardProductInSearchPage;
 
 
 

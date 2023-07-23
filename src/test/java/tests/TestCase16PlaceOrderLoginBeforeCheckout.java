@@ -24,7 +24,7 @@ public class TestCase16PlaceOrderLoginBeforeCheckout {
         aEP.onNavbarSignUpLogInButton.click();
         //5. Fill email, password and click 'Login' button
         ReusableMethods.makeRegistration();
-        aEP.logOutButton.click(); // account must be logged out firstly
+        aEP.onNavbarLogOutButton.click(); // account must be logged out firstly
         aEP.loginToYourAccountWiaEmail.sendKeys(ReusableMethods.eMail);
         aEP.loginToYourAccountWiaPassword.sendKeys(ReusableMethods.passWord);
         aEP.loginToYourAccountWiaLoginButton.click();
