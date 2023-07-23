@@ -45,5 +45,6 @@ public class TestCase19ViewCartBrandProducts {
         //8. Verify that user is navigated to that brand page and can see products
         Assert.assertTrue(aEP.madameProductsInMadamePage.isDisplayed());
         Driver.closeDriver();
+
     }
 }
