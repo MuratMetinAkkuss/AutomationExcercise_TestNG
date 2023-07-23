@@ -36,6 +36,6 @@ public class TestCase21AddEeviewOnProduct {
         aEP.reviewButtonWriteYourReviewInFirstProductPage.click();
         //9. Verify success message 'Thank you for your review.'
         Assert.assertTrue(aEP.thankYouForYourReviewAfterSendInFirstProductPage.isDisplayed());
-
+        Driver.closeDriver();
     }
 }

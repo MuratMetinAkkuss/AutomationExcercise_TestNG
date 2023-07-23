@@ -257,7 +257,10 @@ public class AutomationExcercisePage {
     public WebElement reviewButtonWriteYourReviewInFirstProductPage;
     @FindBy(xpath = "//*[text()='Thank you for your review.']")
     public WebElement thankYouForYourReviewAfterSendInFirstProductPage;
-
+    @FindBy(xpath = "//*[text()='recommended items']")
+    public WebElement recommendedItemsInHomePage;
+    @FindBy(xpath = "//*[@id='recommended-item-carousel']/div/div[1]/div[2]/div/div/div/a")
+    public WebElement addToCarRecommendedProductInHomePage;
 
 
 
