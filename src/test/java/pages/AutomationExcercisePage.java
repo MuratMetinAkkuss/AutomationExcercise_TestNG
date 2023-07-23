@@ -273,6 +273,14 @@ public class AutomationExcercisePage {
     public WebElement recommendedItemsInHomePage;
     @FindBy(xpath = "//*[@id='recommended-item-carousel']/div/div[1]/div[2]/div/div/div/a")
     public WebElement addToCarRecommendedProductInHomePage;
+    @FindBy(xpath = "//*[@href='/download_invoice/500']")
+    public WebElement downloadInvoiceAfterOrdering;
+    @FindBy(xpath = "//*[@data-qa='continue-button']")
+    public WebElement continueButtonAfterOrdering;
+    @FindBy(xpath = "//*[@class='form-control']")
+    public WebElement formTextBoxInOrderingProcess;
+    @FindBy(xpath = "//*[@class='btn btn-default check_out']")
+    public WebElement formTextButtonInOrderingProcess;
 
 
 
