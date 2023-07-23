@@ -217,6 +217,23 @@ public class AutomationExcercisePage {
     public WebElement messageInOrderPage;
     @FindBy(xpath = "//*[@class='cart_quantity_delete']")
     public WebElement xButtonInCartPage;
+    @FindBy(xpath = "//*[@href='#Kids']")
+    public WebElement kidsOnLeftSideBarInHomePage;
+    @FindBy(xpath = "//*[@class='left-sidebar']")
+    public WebElement leftSideBarInHomePage;
+    @FindBy(xpath = "//*[@href='#Women']")
+    public WebElement womenOnLeftSideBarInHomePage;
+    @FindBy(xpath = "//*[@href='/category_products/1']")
+    public WebElement dressUnderWomenOnLeftSideBarInHomePage;
+    @FindBy(xpath = "//*[text()='Women - Dress Products']")
+    public WebElement productsInWomenDressPage;
+    @FindBy(xpath = "//*[@href='#Men']")
+    public WebElement menOnLeftSideBarInWomenPage;
+    @FindBy(xpath = "//*[@href='/category_products/3']")
+    public WebElement tshirtsUnderMenOnLeftSideBarInWomenPage;
+    @FindBy(xpath = "//*[text()='Men - Tshirts Products']")
+    public WebElement productsInMenTshirtsPage;
+
 
 
 
