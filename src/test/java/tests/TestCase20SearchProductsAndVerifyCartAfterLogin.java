@@ -14,7 +14,7 @@ public class TestCase20SearchProductsAndVerifyCartAfterLogin {
         AutomationExcercisePage aEP = new AutomationExcercisePage();
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
-        Driver.getDriver().get("http://automationexercise.com");
+        Driver.getDriver().get(ConfigReader.getProperty("automationExcerciseUrl"));
         //3. Click on 'Products' button
         aEP.onNavbarProductsButton.click();
         //4. Verify user is navigated to ALL PRODUCTS page successfully

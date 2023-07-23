@@ -245,6 +245,18 @@ public class AutomationExcercisePage {
     public WebElement madameProductsInMadamePage;
     @FindBy(xpath = "(//*[@class='btn btn-default add-to-cart'])[1]")
     public WebElement addToCardProductInSearchPage;
+    @FindBy(xpath = "//*[@href='#reviews']")
+    public WebElement writeYourReviewInFirstProductPage;
+    @FindBy(xpath = "//*[@placeholder='Your Name']")
+    public WebElement nameBoxWriteYourReviewInFirstProductPage;
+    @FindBy(xpath = "//*[@placeholder='Email Address']")
+    public WebElement eMailBoxWriteYourReviewInFirstProductPage;
+    @FindBy(xpath = "//*[@placeholder='Add Review Here!']")
+    public WebElement addReviewHereBoxWriteYourReviewInFirstProductPage;
+    @FindBy(xpath = "//*[@id='button-review']")
+    public WebElement reviewButtonWriteYourReviewInFirstProductPage;
+    @FindBy(xpath = "//*[text()='Thank you for your review.']")
+    public WebElement thankYouForYourReviewAfterSendInFirstProductPage;
 
 
 
