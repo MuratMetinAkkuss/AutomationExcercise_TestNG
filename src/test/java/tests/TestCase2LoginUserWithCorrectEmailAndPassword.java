@@ -1,12 +1,8 @@
 package tests;
 
-import com.aventstack.extentreports.ExtentTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
-import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseReport;
@@ -24,7 +20,7 @@ public class TestCase2LoginUserWithCorrectEmailAndPassword extends TestBaseRepor
         Assert.assertTrue(aEP.isHomePageVisible.isDisplayed());
         extentTest.pass("home page is visible successfully");
         //4. Click on 'Signup / Login' button
-        aEP.signUpLogInButton.click();
+        aEP.onNavbarSignUpLogInButton.click();
         //5. Verify 'Login to your account' is visible
         Assert.assertTrue(aEP.loginToYourAccountTextElement.isDisplayed());
         extentTest.pass("'Login to your account' is visible");

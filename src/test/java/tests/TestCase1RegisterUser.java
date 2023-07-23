@@ -2,7 +2,6 @@ package tests;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -27,7 +26,7 @@ public class TestCase1RegisterUser extends TestBaseReport {
         extentTest.pass("home page is visible");
         //4. Click on 'Signup / Login' button
 
-        aEP.signUpLogInButton.click();
+        aEP.onNavbarSignUpLogInButton.click();
 
         //5. Verify 'New User Signup!' is visible
 

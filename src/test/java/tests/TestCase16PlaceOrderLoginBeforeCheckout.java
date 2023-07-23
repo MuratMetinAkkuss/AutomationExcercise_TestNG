@@ -11,50 +11,45 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class TestCase15PlaceOrderRegisterBeforeCheckout {
+public class TestCase16PlaceOrderLoginBeforeCheckout {
     @Test
     public void test01(){
         AutomationExcercisePage aEP = new AutomationExcercisePage();
-        Faker faker = new Faker();
-        //Test Case 15: Place Order: Register before Checkout
+        //Test Case 4: Logout User
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
-        Driver.getDriver().get(ConfigReader.getProperty("automationExcerciseUrl"));
-
+        Driver.getDriver().get("http://automationexercise.com");
         //3. Verify that home page is visible successfully
         Assert.assertTrue(aEP.isHomePageVisible.isDisplayed());
-
         //4. Click 'Signup / Login' button
         aEP.onNavbarSignUpLogInButton.click();
-        //5. Fill all details in Signup and create account
-        //6. Verify 'ACCOUNT CREATED!' and click 'Continue' button
+        //5. Fill email, password and click 'Login' button
         ReusableMethods.makeRegistration();
-
-        //7. Verify ' Logged in as username' at top
-        ReusableMethods.bekle(2);
-        Assert.assertTrue(aEP.loggedInAsUsername.isEnabled());
-
-        //8. Add products to cart
+        aEP.logOutButton.click(); // account must be logged out firstly
+        aEP.loginToYourAccountWiaEmail.sendKeys(ReusableMethods.eMail);
+        aEP.loginToYourAccountWiaPassword.sendKeys(ReusableMethods.passWord);
+        aEP.loginToYourAccountWiaLoginButton.click();
+        //6. Verify 'Logged in as username' at top
+        Assert.assertTrue(aEP.loggedInAsUsername.isDisplayed());
+        //7. Add products to cart
         Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.bekle(4);
-        aEP.firstProductAddToCartInHomePage.click();
-        ReusableMethods.bekle(2);
-        aEP.continueShopping.click();
 
-        //9. Click 'Cart' button
-        actions = new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.PAGE_UP).perform();
-        ReusableMethods.bekle(2);
+        aEP.firstProductAddToCartInHomePage.click();
         aEP.onPopUpCartButton.click();
 
-        //10. Verify that cart page is displayed
+        //8. Click 'Cart' button
+        actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        aEP.onNavbarCartButton.click();
+
+        //9. Verify that cart page is displayed
         Assert.assertTrue(aEP.verifyCartPage.isDisplayed());
 
-        //11. Click Proceed To Checkout
+        //10. Click Proceed To Checkout
         aEP.clickProceedToCheckOutInCartPage.click();
 
-        //12. Verify Address Details and Review Your Order
+        //11. Verify Address Details and Review Your Order
         Assert.assertTrue(aEP.firstNameLastNameInAdressDetails.getText().contains(ReusableMethods.name)&&aEP.firstNameLastNameInAdressDetails.getText().contains(ReusableMethods.lastName));
         Assert.assertTrue(aEP.companyNameInAdressDetails.getText().contains(ReusableMethods.companyName));
         Assert.assertTrue(aEP.adress1InAdressDetails.getText().contains(ReusableMethods.adress));
@@ -62,7 +57,9 @@ public class TestCase15PlaceOrderRegisterBeforeCheckout {
         Assert.assertTrue(aEP.stateCityZipCodeInAdressDetails.getText().contains(ReusableMethods.state)&&aEP.stateCityZipCodeInAdressDetails.getText().contains(ReusableMethods.city)&&aEP.stateCityZipCodeInAdressDetails.getText().contains(ReusableMethods.zipCode));
         Assert.assertTrue(aEP.phoneInAdressDetails.getText().contains(ReusableMethods.phoneNumber));
         Assert.assertTrue(aEP.heading2InAdressDetails.isDisplayed());
-        //13. Enter description in comment text area and click 'Place Order'
+
+        //12. Enter description in comment text area and click 'Place Order'
+        Faker faker = new Faker();
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.END).perform();
         aEP.messageInOrderPage.sendKeys(faker.address().fullAddress());
@@ -73,9 +70,7 @@ public class TestCase15PlaceOrderRegisterBeforeCheckout {
         Driver.getDriver().switchTo().newWindow(WindowType.TAB).get(ConfigReader.getProperty("newWindowAfterOrderedProduct"));
         System.out.println(Driver.getDriver().getWindowHandle());
 
-
-
-        //14. Enter payment details: Name on Card, Card Number, CVC, Expiration date
+        //13. Enter payment details: Name on Card, Card Number, CVC, Expiration date
         aEP.nameOnCarInOrderPage.sendKeys(faker.name().firstName());
         aEP.cardNumberInOrderPage.sendKeys(faker.business().creditCardNumber());
         aEP.cvcInOrderPage.sendKeys(faker.numerify(ConfigReader.getProperty("cardCVCNumber")));
@@ -84,7 +79,7 @@ public class TestCase15PlaceOrderRegisterBeforeCheckout {
         aEP.expiryMonthInOrderPage.sendKeys(cardExp[1]);
         aEP.expiryYearInOrderPage.sendKeys(cardExp[0]);
 
-        //15. Click 'Pay and Confirm Order' button
+        //14. Click 'Pay and Confirm Order' button
         aEP.payAndConfirmInOrderPage.click();
 
         //16. Verify success message 'Your order has been placed successfully!'
@@ -97,5 +92,6 @@ public class TestCase15PlaceOrderRegisterBeforeCheckout {
         Assert.assertTrue(aEP.accountDeletedAfterClickDeleteAccount.isDisplayed());
         aEP.continueButtonAfterClickDeleteAccount.click();
         Driver.quitDriver();
+
     }
 }

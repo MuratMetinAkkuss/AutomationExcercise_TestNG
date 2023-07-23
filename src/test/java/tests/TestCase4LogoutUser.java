@@ -1,7 +1,5 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
@@ -20,7 +18,7 @@ public class TestCase4LogoutUser extends TestBaseReport {
         //3. Verify that home page is visible successfully
         Assert.assertTrue(aEP.isHomePageVisible.isDisplayed());
         //4. Click on 'Signup / Login' button
-        aEP.signUpLogInButton.click();
+        aEP.onNavbarSignUpLogInButton.click();
         //5. Verify 'Login to your account' is visible
         Assert.assertTrue(aEP.loginToYourAccountTextElement.isDisplayed());
         //6. Enter correct email address and password

@@ -1,11 +1,8 @@
 package tests;
 
 import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
@@ -34,7 +31,7 @@ public class TestCase14PlaceOrderRegisterWhileCheckout {
         //5. Click 'Cart' button
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_UP).perform();
-        aEP.onNavbarCartButton.click();
+        aEP.onPopUpCartButton.click();
         //6. Verify that cart page is displayed
         Assert.assertTrue(aEP.productInCartPage.isDisplayed());
         //7. Click Proceed To Checkout
@@ -50,7 +47,7 @@ public class TestCase14PlaceOrderRegisterWhileCheckout {
        Assert.assertTrue(aEP.loggedInAsUsername.isDisplayed());
 
        // //12.Click 'Cart' button
-       aEP.onNavbarCartButton.click();
+       aEP.onPopUpCartButton.click();
 
        // //13. Click 'Proceed To Checkout' button
         aEP.clickProceedToCheckOutInCartPage.click();

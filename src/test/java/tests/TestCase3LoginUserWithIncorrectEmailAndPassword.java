@@ -1,15 +1,11 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseReport;
-
-import java.io.ObjectInputFilter;
 
 public class TestCase3LoginUserWithIncorrectEmailAndPassword extends TestBaseReport {
     @Test
@@ -21,7 +17,7 @@ public class TestCase3LoginUserWithIncorrectEmailAndPassword extends TestBaseRep
         //3. Verify that home page is visible successfully
         Assert.assertTrue(aEP.isHomePageVisible.isDisplayed());
         //4. Click on 'Signup / Login' button
-        aEP.signUpLogInButton.click();
+        aEP.onNavbarSignUpLogInButton.click();
         //5. Verify 'Login to your account' is visible
         Assert.assertTrue(aEP.loginToYourAccountTextElement.isDisplayed());
         //6. Enter incorrect email address and password

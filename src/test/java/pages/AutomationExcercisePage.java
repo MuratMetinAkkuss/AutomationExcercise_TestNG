@@ -1,7 +1,6 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
@@ -15,7 +14,7 @@ public class AutomationExcercisePage {
     @FindBy(xpath = "//img[@alt='Website for automation practice']")
     public WebElement isHomePageVisible;
     @FindBy(xpath = "//a[@href='/login']")
-    public WebElement signUpLogInButton;
+    public WebElement onNavbarSignUpLogInButton;
     @FindBy(xpath = "//h2[text()='New User Signup!']")
     public WebElement isNewUserSignupSign;
     @FindBy(xpath = "//input[@placeholder='Name']")
@@ -146,7 +145,9 @@ public class AutomationExcercisePage {
     public WebElement submitSubscriptionInFooter;
     @FindBy(id = "success-subscribe")
     public WebElement successfullySubscribedInFooter;
-    @FindBy(xpath = "//*[@href='/view_cart']")
+    @FindBy(xpath = "(//*[@href='/view_cart'])[2]")
+    public WebElement onPopUpCartButton;
+    @FindBy(xpath = "(//*[@href='/view_cart'])[1]")
     public WebElement onNavbarCartButton;
     @FindBy(xpath = "(//*[@class='btn btn-default add-to-cart'])[1]")
     public WebElement clickAddToCartForFirstProduct;
