@@ -212,7 +212,10 @@ public class AutomationExcercisePage {
     public WebElement payAndConfirmInOrderPage;
     @FindBy(xpath = "//*[text()='Congratulations! Your order has been confirmed!']")
     public WebElement yourOrderHasBeenConfirmedAfterOrderPage;
-
+    @FindBy(xpath = "//*[text()='Shopping Cart']")
+    public WebElement verifyCartPage;
+    @FindBy(xpath = "//*[@name='message']")
+    public WebElement messageInOrderPage;
 
 
 
