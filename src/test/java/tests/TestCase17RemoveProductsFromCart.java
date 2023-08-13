@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -15,7 +16,7 @@ public class TestCase17RemoveProductsFromCart {
         AutomationExcercisePage aEP = new AutomationExcercisePage();
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
-        Driver.getDriver().get("http://automationexercise.com");
+        Driver.getDriver().get(ConfigReader.getProperty("automationExcerciseUrl"));
         //3. Verify that home page is visible successfully
         Assert.assertTrue(aEP.isHomePageVisible.isDisplayed());
         //4. Add products to cart

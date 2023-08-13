@@ -15,7 +15,7 @@ import utilities.TestBaseReport;
 public class TestCase1RegisterUser extends TestBaseReport {
     @Test
     public void test01(){
-        extentTest=extentReports.createTest("Test01","Smoke test");
+        extentTest=extentReports.createTest("TestCase1RegisterUser","Example test");
         AutomationExcercisePage aEP = new AutomationExcercisePage();
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'

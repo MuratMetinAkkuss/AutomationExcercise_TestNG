@@ -17,7 +17,7 @@ public class TestCase16PlaceOrderLoginBeforeCheckout {
         AutomationExcercisePage aEP = new AutomationExcercisePage();
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
-        Driver.getDriver().get("http://automationexercise.com");
+        Driver.getDriver().get(ConfigReader.getProperty("automationExcerciseUrl"));
         //3. Verify that home page is visible successfully
         Assert.assertTrue(aEP.isHomePageVisible.isDisplayed());
         //4. Click 'Signup / Login' button

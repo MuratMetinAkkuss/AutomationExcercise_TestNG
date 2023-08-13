@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -21,7 +22,7 @@ public class TestCase19ViewCartBrandProducts {
         AutomationExcercisePage aEP = new AutomationExcercisePage();
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
-        Driver.getDriver().get("http://automationexercise.com");
+        Driver.getDriver().get(ConfigReader.getProperty("automationExcerciseUrl"));
         //3. Click on 'Products' button
         aEP.onNavbarProductsButton.click();
         //4. Verify that Brands are visible on left side bar

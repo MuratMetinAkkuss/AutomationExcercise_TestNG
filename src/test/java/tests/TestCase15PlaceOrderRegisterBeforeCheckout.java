@@ -46,7 +46,7 @@ public class TestCase15PlaceOrderRegisterBeforeCheckout {
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_UP).perform();
         ReusableMethods.bekle(2);
-        aEP.onPopUpCartButton.click();
+        aEP.onNavbarCartButton.click();
 
         //10. Verify that cart page is displayed
         Assert.assertTrue(aEP.verifyCartPage.isDisplayed());

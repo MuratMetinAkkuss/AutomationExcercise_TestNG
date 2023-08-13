@@ -31,7 +31,7 @@ public class TestCase14PlaceOrderRegisterWhileCheckout {
         //5. Click 'Cart' button
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_UP).perform();
-        aEP.onPopUpCartButton.click();
+        aEP.onNavbarCartButton.click();
         //6. Verify that cart page is displayed
         Assert.assertTrue(aEP.firstProductInCartPage.isDisplayed());
         //7. Click Proceed To Checkout
@@ -47,7 +47,7 @@ public class TestCase14PlaceOrderRegisterWhileCheckout {
        Assert.assertTrue(aEP.loggedInAsUsername.isDisplayed());
 
        // //12.Click 'Cart' button
-       aEP.onPopUpCartButton.click();
+       aEP.onNavbarCartButton.click();
 
        // //13. Click 'Proceed To Checkout' button
         aEP.clickProceedToCheckOutInCartPage.click();

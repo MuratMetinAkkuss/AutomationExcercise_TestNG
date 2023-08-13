@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AutomationExcercisePage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class TestCase18ViewCategoryProducts {
@@ -14,7 +15,7 @@ public class TestCase18ViewCategoryProducts {
         AutomationExcercisePage aEP = new AutomationExcercisePage();
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
-        Driver.getDriver().get("http://automationexercise.com");
+        Driver.getDriver().get(ConfigReader.getProperty("automationExcerciseUrl"));
         //3. Verify that categories are visible on left side bar
         Actions actions = new Actions(Driver.getDriver());
         actions.scrollToElement(aEP.kidsOnLeftSideBarInHomePage).perform();

@@ -34,5 +34,6 @@ public class TestCase26VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionalit
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(8));
         wait.until(ExpectedConditions.visibilityOf(aEP.fullFledgedTextInHomePage));
         Assert.assertTrue(aEP.fullFledgedTextInHomePage.isDisplayed());
+        Driver.closeDriver();
     }
 }

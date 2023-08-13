@@ -19,7 +19,7 @@ public class TestCase11VerifySubscriptioninCartpage {
         //3. Verify that home page is visible successfully
         Assert.assertTrue(aEP.isHomePageVisible.isDisplayed());
         //4. Click 'Cart' button
-        aEP.onPopUpCartButton.click();
+        aEP.onNavbarCartButton.click();
         //5. Scroll down to footer
         Actions actions = new Actions(Driver.getDriver());
         actions.scrollToElement(aEP.footerElementInHomePage).perform();

@@ -10,6 +10,7 @@ import utilities.TestBaseReport;
 public class TestCase3LoginUserWithIncorrectEmailAndPassword extends TestBaseReport {
     @Test
     public void test01(){
+        extentTest=extentReports.createTest("TestCase3LoginUserWithIncorrectEmailAndPassword","Example test");
         AutomationExcercisePage aEP = new AutomationExcercisePage();
         //1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
